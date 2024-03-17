@@ -5,8 +5,6 @@ export const BackdropImage = () => {
     <img
       src="/bg-main-xxl.jpg"
       className="backdropImage"
-      width={1685}
-      height={840}
     />
   );
 };
