@@ -12,3 +12,7 @@ export const isMobile = () =>
   navigator.userAgent.match(
     /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i
   );
+
+export const openContact = () => {
+  window.open("tel:+919443178774");
+};

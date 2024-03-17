@@ -1,12 +1,12 @@
 import { MouseEvent } from "react";
-import { isMobile } from "../helpers";
+import { isMobile, openContact } from "../helpers";
 import "../styles/home.css";
 
 export const Home = () => {
   const onContact = (e: MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
     if (isMobile()) {
-      window.open("tel:+919876543210");
+      openContact();
     }
   };
 
