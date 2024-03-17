@@ -1,0 +1,98 @@
+:root {
+  /* colors */
+  --color-green: #a2d3cf;
+  --color-green-2: #b5dde7;
+  --color-rose: #f4def0;
+  --color-black-1: #1d1d1d;
+  --color-green-white: #d4e1e9;
+  --color-biscuit-brown: #c68f59;
+  --color-biscuit-brown-1: #df802f;
+
+  /* spacing */
+  --spacing-xxs: 4px;
+  --spacing-xs: 6px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  color: var(--color-black-1);
+  background: linear-gradient(
+    180deg,
+    var(--color-green-2) 0%,
+    var(--color-green-white) 30%,
+    var(--color-green-2) 50%,
+    var(--color-green-white) 90%,
+    var(--color-green-2) 100%
+  );
+}
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+nav,
+blockquote,
+figure,
+ol,
+ul,
+dl,
+dd,
+fieldset,
+legend,
+button,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+/* Remove hyperlink styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default button styling */
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+/* Remove border outline on focused elements */
+:focus {
+  outline: 0;
+}
+
+/* Custom styles */
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
