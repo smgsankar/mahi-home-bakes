@@ -97,3 +97,18 @@ button {
 .homeWithNav {
   position: relative;
 }
+
+#main > section {
+  height: 700px;
+  scroll-snap-align: start;
+}
+
+#main > div {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+#main > footer {
+  height: 300px;
+  scroll-snap-align: end;
+}

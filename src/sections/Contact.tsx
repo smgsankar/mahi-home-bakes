@@ -1,3 +1,3 @@
 export const Contact = () => {
-  return <section id="contact" style={{ height: 700 }}>Contact</section>;
+  return <section id="contact">Contact</section>;
 };
