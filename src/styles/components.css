@@ -2,14 +2,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 1685px;
+  width: 100dvw;
   height: 100dvh;
   z-index: -1;
   opacity: 0.8;
   object-fit: fill;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1460px) {
   .backdropImage {
     width: 1460px;
   }

@@ -20,13 +20,10 @@
 
 * {
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
   color: var(--color-black-1);
   background: linear-gradient(
     180deg,
@@ -91,8 +88,12 @@ button {
 
 /* Custom styles */
 #main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  text-align: center;
+}
+
+.homeWithNav {
   position: relative;
 }

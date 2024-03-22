@@ -4,11 +4,11 @@ import { Topbar } from "./sections/Topbar";
 import { Home } from "./sections/Home";
 import { BackdropImage } from "./components/BackdropImage";
 import "./styles/App.css";
-// import { Contact } from "./sections/Contact";
-// import { Footer } from "./sections/Footer";
-// import { Gallery } from "./sections/Gallery";
-// import { Testimonials } from "./sections/Testimonials";
-// import { About } from "./sections/About";
+import { Contact } from "./sections/Contact";
+import { Footer } from "./sections/Footer";
+import { Gallery } from "./sections/Gallery";
+import { Testimonials } from "./sections/Testimonials";
+import { About } from "./sections/About";
 
 function App() {
   useEffect(() => {
@@ -22,11 +22,11 @@ function App() {
         <Home />
         <BackdropImage />
       </div>
-      {/* <About />
+      <About />
       <Gallery />
       <Testimonials />
       <Contact />
-      <Footer /> */}
+      <Footer />
     </main>
   );
 }
