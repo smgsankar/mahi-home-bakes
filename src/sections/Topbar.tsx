@@ -31,8 +31,10 @@ export const Topbar = () => {
           onClick={toggleDropdown}
         >
           <ul>
+            <NavbarItem targetId="about">About</NavbarItem>
             <NavbarItem targetId="gallery">Gallery</NavbarItem>
             <NavbarItem targetId="testimonials">Testimonials</NavbarItem>
+            <NavbarItem targetId="contact">Contact</NavbarItem>
           </ul>
         </div>
       )}

@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
-import "../styles/navbar.css";
 import { goToSection } from "../helpers";
+import "../styles/navbar.css";
 
 type Props = {
   targetId: string;

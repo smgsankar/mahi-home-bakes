@@ -1,8 +1,8 @@
 export const goToSection = (id: string) => {
+  const main = document.getElementById('main');
   const section = document.getElementById(id);
-  console.log(section?.offsetTop, window.scrollTo);
-  if (!section) return;
-  window.scrollTo({
+  if (!section || !main) return;
+  main.scrollTo({
     top: section.offsetTop,
     behavior: "smooth",
   });
