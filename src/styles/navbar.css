@@ -20,6 +20,11 @@ nav {
 }
 
 #logo {
+  width: 140px;
+  height: 100px;
+}
+
+#logo_alt {
   width: 135px;
   height: 75px;
 }
@@ -85,6 +90,11 @@ nav {
   }
 
   #logo {
+    width: 120px;
+    height: 86px;
+  }
+  
+  #logo_alt {
     width: 108px;
     height: 60px;
   }
