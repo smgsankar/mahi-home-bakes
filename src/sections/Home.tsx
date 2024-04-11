@@ -1,5 +1,5 @@
 import { MouseEvent } from "react";
-import { isMobile, openContact } from "../helpers";
+import { goToSection, isMobile, openContact } from "../helpers";
 import "../styles/home.css";
 
 export const Home = () => {
@@ -7,6 +7,8 @@ export const Home = () => {
     e.stopPropagation();
     if (isMobile()) {
       openContact();
+    } else {
+      goToSection("contact");
     }
   };
 
