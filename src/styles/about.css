@@ -20,7 +20,7 @@
   display: flex;
   font-size: 24px;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .about-list-item {
