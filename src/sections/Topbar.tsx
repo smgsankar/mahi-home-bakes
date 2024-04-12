@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Logo } from "../components/Logo";
 import { NavbarItem } from "../components/NavbarItem";
-import { MenuSvg } from "../icons/menuSvg";
+import { MenuSvg } from "../icons/MenuSvg";
 import "../styles/navbar.css";
 
 export const Topbar = () => {
