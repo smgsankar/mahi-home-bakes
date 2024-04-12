@@ -98,12 +98,7 @@ button {
   position: relative;
 }
 
-#main > section {
-  height: 700px;
-  scroll-snap-align: start;
-}
-
-#main > div {
+#main > * {
   height: 100vh;
   scroll-snap-align: start;
 }
