@@ -1,8 +1,6 @@
 name: Deploy to Firebase Hosting on merge
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 env:
   VITE_FIREBASE_CONFIG: ${{ secrets.VITE_FIREBASE_CONFIG }}
