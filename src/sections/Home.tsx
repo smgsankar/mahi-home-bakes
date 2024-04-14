@@ -1,10 +1,9 @@
-import { MouseEvent } from "react";
 import { goToSection, isMobile, openContact } from "../helpers";
+import { PrimaryButton } from "../components/PrimaryButton";
 import "../styles/home.css";
 
 export const Home = () => {
-  const onContact = (e: MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
+  const onContact = () => {
     if (isMobile()) {
       openContact();
     } else {
@@ -17,7 +16,7 @@ export const Home = () => {
       <h5 className="textContentContainer">
         Home-Crafted, Eggless Delights with a Dash of Love and No Preservatives!
       </h5>
-      <button onClick={onContact}>Contact</button>
+      <PrimaryButton onClick={onContact}>Contact</PrimaryButton>
     </section>
   );
 };

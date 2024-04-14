@@ -1,10 +1,7 @@
 :root {
   /* colors */
-  --color-green: #a2d3cf;
-  --color-green-2: #b5dde7;
-  --color-rose: #f4def0;
+  --color-green: #c0e2eb;
   --color-black-1: #1d1d1d;
-  --color-green-white: #d4e1e9;
   --color-biscuit-brown: #c68f59;
   --color-biscuit-brown-1: #df802f;
 
@@ -25,14 +22,7 @@
 
 body {
   color: var(--color-black-1);
-  background: linear-gradient(
-    180deg,
-    var(--color-green-2) 0%,
-    var(--color-green-white) 30%,
-    var(--color-green-2) 50%,
-    var(--color-green-white) 90%,
-    var(--color-green-2) 100%
-  );
+  background-color: var(--color-green);
 }
 
 /* Reset some default styles */

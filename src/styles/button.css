@@ -1,0 +1,21 @@
+.themed-button-primary {
+  background: var(--color-biscuit-brown);
+  color: whitesmoke;
+  font-size: 21px;
+  font-weight: 500;
+  font-family: "Noto Sans Display";
+  border: solid 1px var(--color-biscuit-brown-1);
+  border-radius: 12px;
+  padding: 12px 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.themed-button-primary:hover {
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 480px) {
+  .themed-button-primary {
+    padding: 8px 12px;
+  }
+}
