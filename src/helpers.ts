@@ -1,5 +1,5 @@
 export const goToSection = (id: string) => {
-  const main = document.getElementById('main');
+  const main = document.getElementById("main");
   const section = document.getElementById(id);
   if (!section || !main) return;
   main.scrollTo({
@@ -15,4 +15,12 @@ export const isMobile = () =>
 
 export const openContact = () => {
   window.open("tel:+919443178774");
+};
+
+export const goToContact = () => {
+  if (isMobile()) {
+    openContact();
+  } else {
+    goToSection("contact");
+  }
 };
