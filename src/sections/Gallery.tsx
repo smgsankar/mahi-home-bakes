@@ -1,5 +1,4 @@
 import { PrimaryButton } from "../components/PrimaryButton";
-import { goToContact } from "../helpers";
 import "../styles/gallery.css";
 
 export const Gallery = () => {
@@ -14,9 +13,6 @@ export const Gallery = () => {
           <PrimaryButton onClick={() => console.log("View gallery")}>
             View Gallery
           </PrimaryButton>
-          <button id="contact-from-gallery" type="button" onClick={goToContact}>
-            Contact to order
-          </button>
         </div>
       </div>
       <img
