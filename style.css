@@ -303,6 +303,7 @@ footer>div {
 #attributions {
   display: flex;
   flex-direction: column;
+  width: fit-content;
   gap: 6px;
 }
 
@@ -313,6 +314,5 @@ footer>div {
 }
 
 #self {
-  width: 100%;
   text-align: center;
 }
