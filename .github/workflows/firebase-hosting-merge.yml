@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          entryPoint: .
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MAHI_HOME_BAKES }}
           channelId: live
