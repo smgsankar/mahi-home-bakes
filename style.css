@@ -30,14 +30,52 @@ main {
   scroll-snap-type: y mandatory;
 }
 
-.banner {
+.banner  {
   scroll-snap-align: start;
+  animation: 2s floatup ease-in;
 }
+
+
+@keyframes floatup {
+  0% {
+    opacity: 0;
+    transform: translate(y100%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .banner-item {
   position: relative;
   height: 100dvh;
   width: 100dvw;
+  animation: smoothReveal 2s ease-out forwards;
+  animation-timeline: view(block);
+  animation-range: cover 0% cover 50%;
+  margin: 0px;
+}
+
+@keyframes smoothReveal {
+  0% {
+    transform: translateY(200vh);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20vh);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .banner-caption-container {
@@ -50,6 +88,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: smoothReveal 5s ease-out forwards;
+  animation-timeline: view(block);
+  animation-range: cover 0% cover 50%;
+  margin: 0px;
 }
 
 
@@ -60,7 +102,9 @@ main {
   font-size: 48px;
   font-style: italic;
   font-weight: 400;
+  animation: 4s floatup ease-out;
 }
+
 
 .banner-image {
   height: 100%;
@@ -92,12 +136,16 @@ main {
   text-decoration: none;
   border: none;
   outline: none;
+  transition: transform 0.3s ease;
 }
 
 #cta:active,
 #cta:hover {
   text-decoration: underline;
   text-underline-offset: 1px;
+  transform: scale(1.1); 
+  background-color: var(--color-alternate-secondary);
+
 }
 
 #hero-caption {
@@ -267,9 +315,14 @@ main {
   border-top-right-radius: 12px;
 }
 
+
 .product-description {
-  display: none;
+  width: 100%;
   text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: none;
+
 }
 
 .product:hover {
@@ -312,8 +365,43 @@ footer>div {
   display: flex;
   flex-direction: row;
   gap: 12px;
+  transition: transform 0.3s ease;
+  padding-right: 1%;
+}
+
+#socials :hover{
+  transform: scale(1.08);
 }
 
 #self {
   text-align: center;
 }
+
+
+
+
+
+/*.banner-item {
+  position: relative;
+  height: 100dvh;
+  width: 100dvw;
+  animation: smoothReveal 2.5s ease-out forwards;
+  animation-timeline: view(block);
+  animation-range: cover 0% cover 50%;
+  margin: 0px;
+}
+
+@keyframes smoothReveal {
+  0% {
+    transform: translateY(200vh);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20vh);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}*/
