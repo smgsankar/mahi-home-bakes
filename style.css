@@ -8,6 +8,7 @@
   --bg-translucent-web: rgba(0, 0, 0, 0.7);
   --bg-translucent-mobile: rgba(0, 0, 0, 0.5);
   --i: 0;
+  scroll-snap-type: y mandatory;
 }
 
 * {
@@ -17,17 +18,9 @@
 }
 
 body {
-  height: 100dvh;
-  width: 100dvw;
+  overflow-x: hidden;
   font-family: "Roboto Serif", serif;
   background-color: var(--color-main);
-}
-
-main {
-  height: 100dvh;
-  width: 100dvw;
-  overflow: scroll;
-  scroll-snap-type: y mandatory;
 }
 
 .banner {
@@ -36,16 +29,16 @@ main {
 
 .banner-item {
   position: relative;
-  height: 100dvh;
-  width: 100dvw;
+  height: 100svh;
+  width: 100svw;
 }
 
 .banner-caption-container {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100dvh;
-  width: 100dvw;
+  height: 100%;
+  width: 100%;
   background-color: var(--bg-translucent-web);
   display: flex;
   justify-content: center;
@@ -69,7 +62,7 @@ main {
 }
 
 #hero {
-  width: 100dvw;
+  width: 100%;
   padding: 60px 24px;
   display: flex;
   justify-content: space-evenly;
@@ -180,7 +173,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 36px;
-  width: 100dvw;
+  width: 100%;
   padding: 40px 24px;
   background-color: #f3dcb5;
   scroll-snap-align: start;
@@ -191,7 +184,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  width: 100dvw;
+  width: 100%;
 }
 
 #products-heading {
@@ -261,7 +254,7 @@ main {
 
 .product-image {
   max-width: 300px;
-  max-height: 80dvh;
+  max-height: 80%;
   object-fit: contain;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
