@@ -253,8 +253,8 @@ body {
 }
 
 .product-image {
-  max-width: 300px;
-  max-height: 80%;
+  width: 300px;
+  height: 450px;
   object-fit: contain;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
