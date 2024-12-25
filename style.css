@@ -107,69 +107,6 @@ body {
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  .banner-caption-container {
-    background-color: var(--bg-translucent-mobile);
-  }
-
-  .banner-caption {
-    font-size: 32px;
-  }
-
-  #hero {
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  #hero-caption {
-    width: 100%;
-  }
-
-  #logo {
-    width: 240px;
-    height: 172px;
-  }
-
-  #products {
-    padding: 40px 0px !important;
-  }
-
-  #products-header {
-    padding: 0px 24px;
-  }
-
-  #products-container {
-    flex-wrap: nowrap !important;
-    padding: 0 36px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-
-  .product:hover {
-    transform: none !important;
-  }
-
-  footer {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  footer>div {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 12px !important;
-  }
-
-  #attributions {
-    width: 100%;
-    text-align: center;
-    gap: 12px;
-  }
-}
-
 #products {
   display: flex;
   flex-direction: column;
@@ -192,7 +129,7 @@ body {
 #products-heading {
   text-align: center;
   font-style: italic;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 500;
 }
 
@@ -212,10 +149,12 @@ body {
 @keyframes fade-in {
   from {
     opacity: 0;
+    scale: 0.8;
   }
 
   to {
     opacity: 1;
+    scale: 1;
   }
 }
 
@@ -231,27 +170,29 @@ body {
   align-self: flex-start;
   transition: transform 0.3s;
   scroll-snap-align: center;
-  animation: fade-in 0.5s ease-in-out forwards;
 }
 
-#products-container:nth-child(1) {
+.fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+  animation-delay: calc(0.25s * var(--i));
+  opacity: 0;
+  scale: 0.8;
+}
+
+.product:nth-child(1) {
   --i: 1;
 }
 
-#products-container:nth-child(2) {
+.product:nth-child(2) {
   --i: 2;
 }
 
-#products-container:nth-child(3) {
+.product:nth-child(3) {
   --i: 3;
 }
 
-#products-container:nth-child(4) {
+.product:nth-child(4) {
   --i: 4;
-}
-
-#products-container:nth-child() {
-  animation-delay: calc(0.1s * var(--i));
 }
 
 .product-image {
@@ -311,4 +252,77 @@ footer>div {
 
 #self {
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-caption-container {
+    background-color: var(--bg-translucent-mobile);
+  }
+
+  .banner-caption {
+    font-size: 32px;
+  }
+
+  #hero {
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #hero-caption {
+    width: 100%;
+  }
+
+  #logo {
+    width: 240px;
+    height: 172px;
+  }
+
+  #products {
+    padding: 40px 0px;
+  }
+
+  #products-header {
+    padding: 0px 24px;
+  }
+
+  #products-container {
+    flex-wrap: nowrap;
+    padding: 0 36px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .product:hover {
+    transform: none;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  footer>div {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 12px;
+  }
+
+  #attributions {
+    width: 100%;
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+  }
+
+  .product:hover {
+    transform: none;
+  }
 }
