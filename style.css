@@ -72,6 +72,7 @@ body {
 
 #logo {
   width: 360px;
+  height: 260px;
   object-fit: contain;
 }
 
@@ -127,6 +128,7 @@ body {
 
   #logo {
     width: 240px;
+    height: 172px;
   }
 
   #products {
