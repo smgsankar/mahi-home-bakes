@@ -8,7 +8,6 @@
   --bg-translucent-web: rgba(0, 0, 0, 0.7);
   --bg-translucent-mobile: rgba(0, 0, 0, 0.5);
   --i: 0;
-  scroll-snap-type: y mandatory;
 }
 
 * {
@@ -23,17 +22,41 @@ body {
   background-color: var(--color-main);
 }
 
-.banner {
-  scroll-snap-align: start;
+.hidden {
+  display: none;
 }
 
-.banner-item {
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+#banner {
+  height: 400vh;
+  overflow: hidden;
   position: relative;
-  height: 100svh;
-  width: 100svw;
 }
 
-.banner-caption-container {
+#banner-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+#banner-caption-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -43,22 +66,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 
 
-.banner-caption {
+#banner-caption {
   width: 80%;
+  transform: translateY(-80%);
   text-align: center;
   color: var(--color-banner-caption-text);
   font-size: 48px;
   font-style: italic;
   font-weight: 400;
+  animation-delay: 300ms;
+  opacity: 0;
 }
 
-.banner-image {
+#banner-image {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  opacity: 0;
 }
 
 #hero {
@@ -67,7 +95,6 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  scroll-snap-align: start;
 }
 
 #logo {
@@ -115,7 +142,6 @@ body {
   width: 100%;
   padding: 40px 24px;
   background-color: #f3dcb5;
-  scroll-snap-align: start;
 }
 
 #products-header {
@@ -128,7 +154,6 @@ body {
 
 #products-heading {
   text-align: center;
-  font-style: italic;
   font-size: 32px;
   font-weight: 500;
 }
@@ -146,7 +171,7 @@ body {
   gap: 32px;
 }
 
-@keyframes fade-in {
+@keyframes fade {
   from {
     opacity: 0;
     scale: 0.8;
@@ -169,14 +194,13 @@ body {
   padding-bottom: 24px;
   align-self: flex-start;
   transition: transform 0.3s;
-  scroll-snap-align: center;
-}
-
-.fade-in {
-  animation: fade-in 1s ease-in-out forwards;
-  animation-delay: calc(0.25s * var(--i));
   opacity: 0;
   scale: 0.8;
+}
+
+.fade {
+  animation: fade 1s ease-in-out forwards;
+  animation-delay: calc(0.25s * var(--i));
 }
 
 .product:nth-child(1) {
@@ -217,7 +241,6 @@ footer {
   font-weight: 200;
   background-color: var(--color-alternate-secondary);
   color: var(--color-main);
-  scroll-snap-align: end;
 }
 
 footer a {
@@ -255,11 +278,11 @@ footer>div {
 }
 
 @media screen and (max-width: 768px) {
-  .banner-caption-container {
+  #banner-caption-container {
     background-color: var(--bg-translucent-mobile);
   }
 
-  .banner-caption {
+  #banner-caption {
     font-size: 32px;
   }
 
@@ -318,9 +341,9 @@ footer>div {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .fade-in {
+  /* .fade {
     animation: none;
-  }
+  } */
 
   .product:hover {
     transform: none;
