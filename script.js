@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const bannerCaption = document.getElementById("banner-caption");
   const bannerCaptionContainer = document.getElementById("banner-caption-container");
 
+  const hero = document.getElementById("hero");
+
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
   bannerImage.classList.add("fade-in");
@@ -46,10 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentBanner = 0;
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 4 * height - 300) {
+    if (window.scrollY > Math.max(3.7 * height, 4 * height - 300)) {
       banner.classList.add("hidden");
+      hero.classList.add("appear");
     } else {
       banner.classList.remove("hidden");
+      hero.classList.remove("appear");
     }
     const index = Math.floor(window.scrollY / height);
     if (currentBanner !== index) {
