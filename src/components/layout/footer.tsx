@@ -1,5 +1,6 @@
 import { Instagram, Facebook, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { instagramLink } from "@/data/content";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,11 +23,7 @@ export default function Footer() {
 
           <div className="flex justify-center space-x-4">
             <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                aria-label="Instagram"
-              >
+              <a href={instagramLink} target="_blank" aria-label="Instagram">
                 <Instagram className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
               </a>
             </Button>

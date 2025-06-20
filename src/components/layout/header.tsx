@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Instagram, Facebook, ShoppingBag } from "lucide-react";
+import { instagramLink } from "@/data/content";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -61,11 +62,7 @@ export default function Header() {
             ))}
             <div className="flex items-center space-x-2 pl-4">
               <Button variant="ghost" size="icon" asChild>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  aria-label="Instagram"
-                >
+                <a href={instagramLink} target="_blank" aria-label="Instagram">
                   <Instagram className="h-5 w-5 text-foreground hover:text-primary" />
                 </a>
               </Button>
@@ -121,7 +118,7 @@ export default function Header() {
                   <div className="flex items-center justify-center space-x-4 pt-4 border-t border-border">
                     <Button variant="ghost" size="icon" asChild>
                       <a
-                        href="https://instagram.com"
+                        href={instagramLink}
                         target="_blank"
                         aria-label="Instagram"
                       >
