@@ -18,14 +18,14 @@ export default function AboutSection() {
             </h2>
             <p className="text-lg text-foreground mb-4">
               Welcome to Mahi Home Bakes! We are passionate about creating
-              delicious, handcrafted baked goods that bring joy to every
+              delicious, eggless, handcrafted delicacies that bring joy to every
               occasion. From stunning celebration cakes to delightful cupcakes
               and cookies, every item is made with the finest ingredients and a
               sprinkle of love.
             </p>
             <p className="text-lg text-foreground">
               Our mission is to make your special moments even sweeter with
-              treats that not only look beautiful but taste incredible too.
+              treats that not only look beautiful but healthy and taste incredible and are healthy too.
               Explore our creations and let us be a part of your celebrations!
             </p>
           </div>

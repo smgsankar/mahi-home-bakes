@@ -27,7 +27,7 @@ export default function ProductsSection() {
           Our Delicious Offerings
         </h2>
         <p className="text-lg text-muted-foreground mb-10 text-center max-w-2xl mx-auto">
-          Indulge in our wide variety of freshly baked goods, perfect for any
+          Indulge in our wide variety of freshly baked delights, perfect for any
           occasion or just a sweet treat for yourself.
         </p>
 
