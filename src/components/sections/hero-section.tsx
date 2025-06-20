@@ -16,20 +16,23 @@ export default function HeroSection() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <div className="max-w-3xl mx-auto">
           <h1
-            className="text-5xl md:text-7xl font-headline font-bold text-primary mb-6 animate-fade-in"
+            className="text-5xl md:text-7xl font-headline font-bold text-primary mb-6 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
             Mahi Home Bakes
           </h1>
           <p
-            className="text-lg md:text-xl text-foreground mb-10 animate-fade-in"
+            className="text-lg md:text-xl text-foreground mb-10 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
             Crafting sweet moments with love and passion. Discover our
             delightful range of celebration cakes, cupcakes, cookies, and
             chocolates.
           </p>
-          <div className="animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <div
+            className="opacity-0 animate-fade-in"
+            style={{ animationDelay: "0.6s" }}
+          >
             <Button
               size="lg"
               asChild
