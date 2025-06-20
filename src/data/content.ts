@@ -1,3 +1,6 @@
+export const whatsappNumber = "+919342638257";
+export const emailAddress = "mahihomebakes@gmail.com";
+
 export interface Product {
   id: string;
   name: string;

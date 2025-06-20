@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { emailAddress, whatsappNumber } from "@/data/content";
 import { Mail, MessageSquare, MapPin } from "lucide-react";
 
 export default function ContactSection() {
-  const whatsappNumber = "+919342638257";
-  const emailAddress = "mahihomebakes@gmail.com";
-
   return (
     <section id="contact" className="bg-card py-12 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
