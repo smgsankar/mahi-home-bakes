@@ -8,7 +8,7 @@ export default function HeroSection() {
     >
       <div className="absolute inset-0 opacity-20">
         <img
-          src="https://placehold.co/1920x1080.png" // Replace with an actual hero image
+          src="hero-bg.png"
           alt="Assortment of delicious baked goods"
           className="object-cover w-full h-full"
           data-ai-hint="bakery display"
