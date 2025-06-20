@@ -3,6 +3,7 @@
 
 name: Deploy to Firebase Hosting on merge
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -10,7 +11,18 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: yarn
+      - name: Build the project
+        run: yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           entryPoint: .

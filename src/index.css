@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --background: 60 56% 91%;
+    /* Light Cream #   */
+    --foreground: 240 10% 10%;
+    /* Dark Blue/Grey */
+
+    --card: 60 50% 95%;
+    /* Slightly off-cream for cards */
+    --card-foreground: 240 10% 10%;
+    /* Dark Blue/Grey */
+
+    --popover: 60 50% 95%;
+    --popover-foreground: 240 10% 10%;
+
+    --primary: 330 83% 81%;
+    /* Pastel Pink #F9A8D4 */
+    --primary-foreground: 330 40% 25%;
+    /* Darker Pink/Purple for text on pastel pink */
+
+    --secondary: 267 44% 85%;
+    /* Lighter Muted Lavender for secondary elements */
+    --secondary-foreground: 267 30% 25%;
+    /* Darker shade for text on lavender */
+
+    --muted: 60 30% 88%;
+    /* Muted Cream */
+    --muted-foreground: 60 10% 45%;
+    /* Darker muted text */
+
+    --accent: 267 44% 76%;
+    /* Muted Lavender #B19CD9 */
+    --accent-foreground: 267 30% 20%;
+    /* Darker shade for text on lavender */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 330 40% 85%;
+    /* Light pinkish border */
+    --input: 330 40% 88%;
+    /* Light pinkish input background */
+    --ring: 330 83% 81%;
+    /* Pastel Pink for focus rings */
+
+    --radius: 0.75rem;
+    /* Slightly more rounded corners for a softer feel */
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    scroll-behavior: smooth;
+  }
+
+  .fade-in {
+    animation: fadeInAnimation 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Staggered fade-in for child elements */
+  .stagger-fade-in>* {
+    opacity: 0;
+    animation: fadeInAnimation 0.8s ease-out forwards;
+  }
+}
