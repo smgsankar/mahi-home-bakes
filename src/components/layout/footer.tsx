@@ -6,8 +6,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-card text-card-foreground border-t border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 items-center">
           <div className="flex flex-col items-center md:items-start">
             <a href="#home" className="flex items-center gap-2 mb-2">
               <ShoppingBag className="h-7 w-7 text-primary" />
@@ -50,10 +50,26 @@ export default function Footer() {
             </Button>
           </div>
 
-          <p className="text-sm text-muted-foreground text-center md:text-right">
-            © {currentYear} Mahi Home Bakes. All rights reserved.
-          </p>
+          <div className="flex flex-col gap-2">
+            <p className="text-sm text-muted-foreground text-center md:text-right">
+              © {currentYear} Mahi Home Bakes. All rights reserved.
+            </p>
+            <p className="text-sm text-muted-foreground text-center md:text-right">
+              <a href="credits.html" className="text-primary hover:underline">
+                Credits
+              </a>
+            </p>
+          </div>
         </div>
+        <p className="text-sm text-muted-foreground text-center">
+          Made with ❤️ by{" "}
+          <a
+            href="https://github.com/smgsankar"
+            className="text-primary hover:underline"
+          >
+            smgsankar
+          </a>
+        </p>
       </div>
     </footer>
   );
