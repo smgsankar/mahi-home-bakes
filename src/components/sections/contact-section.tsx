@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Mail, MessageSquare, MapPin } from "lucide-react";
 
 export default function ContactSection() {
-  const whatsappNumber = "+1234567890"; // Replace with actual phone number
-  const emailAddress = "hello@mahihomebakes.com"; // Replace with actual email
+  const whatsappNumber = "+919342638257";
+  const emailAddress = "mahihomebakes@gmail.com";
 
   return (
     <section id="contact" className="bg-card py-12 md:py-20">
@@ -77,8 +77,8 @@ export default function ContactSection() {
                   Our Location
                 </h3>
                 <p className="text-muted-foreground">
-                  We are a home-based bakery located in Chennai.
-                  Pick-up details will be provided upon order confirmation.
+                  We are a home-based bakery located in Chennai. Pick-up details
+                  will be provided upon order confirmation.
                 </p>
               </div>
             </div>
