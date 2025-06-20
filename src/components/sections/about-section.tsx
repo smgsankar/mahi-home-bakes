@@ -5,7 +5,7 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <img
-              src="https://placehold.co/900x600.png" // Replace with an image of Mahi or the bakery
+              src="https://placehold.co/900x600.png" // Replace here
               alt="Mahi Home Bakes - The Baker"
               width={600}
               height={400}
