@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Twitter, ShoppingBag } from "lucide-react";
+import { Instagram, Facebook, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
@@ -37,15 +37,6 @@ export default function Footer() {
                 aria-label="Facebook"
               >
                 <Facebook className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
               </a>
             </Button>
           </div>
