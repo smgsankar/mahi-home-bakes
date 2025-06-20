@@ -4,13 +4,13 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="py-12 md:py-20 relative bg-gradient-to-br from-background to-primary/30 min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+      className="py-12 md:py-20 relative bg-gradient-to-br from-background to-primary/30 min-h-dvh flex items-center justify-center pt-20 overflow-hidden"
     >
       <div className="absolute inset-0 opacity-20">
         <img
-          src="hero-bg.png"
+          src="hero-bg.webp"
           alt="Assortment of delicious baked goods"
-          className="object-cover w-full h-full"
+          className="w-full h-full object-scale-down object-bottom md:object-cover md:object-center"
         />
       </div>
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
