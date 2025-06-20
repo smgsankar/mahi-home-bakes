@@ -55,7 +55,10 @@ export default function ProductsSection() {
         </div>
 
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            key={selectedCategory}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {filteredProducts.map((product, index) => (
               <ProductCard
                 key={product.id}

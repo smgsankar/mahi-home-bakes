@@ -19,7 +19,7 @@ export default function ProductCard({
 }: ProductCardProps) {
   return (
     <Card
-      className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out h-full flex flex-col animate-fade-in"
+      className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out h-full flex flex-col opacity-0 animate-fade-in"
       style={{ animationDelay }}
     >
       <CardHeader className="p-0">
