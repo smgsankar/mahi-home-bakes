@@ -55,7 +55,11 @@ export default function Footer() {
               © {currentYear} Mahi Home Bakes. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground text-center md:text-right">
-              <a href="credits.html" className="text-primary hover:underline">
+              <a
+                target="_blank"
+                href="credits.html"
+                className="text-primary hover:underline"
+              >
                 Credits
               </a>
             </p>
@@ -64,6 +68,7 @@ export default function Footer() {
         <p className="text-sm text-muted-foreground text-center">
           Made with ❤️ by{" "}
           <a
+            target="_blank"
             href="https://github.com/smgsankar"
             className="text-primary hover:underline"
           >
