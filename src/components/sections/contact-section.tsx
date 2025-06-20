@@ -10,7 +10,7 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="text-lg text-muted-foreground mb-10 text-center max-w-2xl mx-auto">
-          Ready to order or have a question? We'd love to hear from you! Reach
+          Have a question? We'd love to hear from you! Reach
           out via WhatsApp for the quickest response.
         </p>
 
@@ -55,7 +55,7 @@ export default function ContactSection() {
                   Email Us
                 </h3>
                 <p className="text-muted-foreground">
-                  For inquiries or custom orders, feel free to send an email.
+                  For inquiries or custom requests, feel free to send an email.
                 </p>
                 <a
                   href={`mailto:${emailAddress}`}
@@ -75,8 +75,7 @@ export default function ContactSection() {
                   Our Location
                 </h3>
                 <p className="text-muted-foreground">
-                  We are a home-based bakery located in Chennai. Pickup details
-                  will be provided upon order confirmation.
+                  We are a home-based bakery located in Mannivakkam, Chennai.
                 </p>
               </div>
             </div>
