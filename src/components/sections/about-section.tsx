@@ -10,7 +10,6 @@ export default function AboutSection() {
               width={600}
               height={400}
               className="rounded-lg shadow-xl object-cover aspect-video"
-              data-ai-hint="baker portrait"
             />
           </div>
           <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>

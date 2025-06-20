@@ -18,7 +18,6 @@ export default function GalleryImage({ image, animationDelay = "0s" }: Props) {
             src={image.src}
             alt={image.alt}
             className="group-hover:scale-105 transition-transform duration-300 ease-in-out object-cover h-full w-full"
-            data-ai-hint={image.dataAiHint}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
             <p className="text-white text-sm font-medium">{image.alt}</p>

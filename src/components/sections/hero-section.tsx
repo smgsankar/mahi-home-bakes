@@ -11,7 +11,6 @@ export default function HeroSection() {
           src="hero-bg.png"
           alt="Assortment of delicious baked goods"
           className="object-cover w-full h-full"
-          data-ai-hint="bakery display"
         />
       </div>
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">

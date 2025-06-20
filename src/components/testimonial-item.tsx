@@ -1,37 +1,53 @@
-import type { Testimonial } from '@/data/content';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Quote } from 'lucide-react';
+import type { Testimonial } from "@/data/content";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Quote } from "lucide-react";
 
 interface TestimonialItemProps {
   testimonial: Testimonial;
   animationDelay?: string;
 }
 
-export default function TestimonialItem({ testimonial, animationDelay = '0s' }: TestimonialItemProps) {
+export default function TestimonialItem({
+  testimonial,
+  animationDelay = "0s",
+}: TestimonialItemProps) {
   const authorInitials = testimonial.author
-    .split(' ')
+    .split(" ")
     .map((n) => n[0])
-    .join('');
+    .join("");
 
   return (
-    <Card className="bg-accent/20 border-accent shadow-lg animate-fade-in h-full" style={{ animationDelay }}>
+    <Card
+      className="bg-accent/20 border-accent shadow-lg animate-fade-in h-full"
+      style={{ animationDelay }}
+    >
       <CardContent className="p-6 flex flex-col items-center text-center h-full">
         <Quote className="w-8 h-8 text-accent mb-4" />
-        <p className="text-foreground italic mb-6 flex-grow">"{testimonial.quote}"</p>
+        <p className="text-foreground italic mb-6 flex-grow">
+          "{testimonial.quote}"
+        </p>
         <div className="flex items-center">
           {testimonial.avatarSrc && (
             <Avatar className="h-10 w-10 mr-3">
-              <AvatarImage src={testimonial.avatarSrc} alt={testimonial.author} data-ai-hint={testimonial.dataAiHint || 'person portrait'} />
+              <AvatarImage
+                src={testimonial.avatarSrc}
+                alt={testimonial.author}
+              />
               <AvatarFallback>{authorInitials}</AvatarFallback>
             </Avatar>
           )}
-          {!testimonial.avatarSrc && testimonial.dataAiHint && ( // Fallback for visual representation if no avatar but hint exists
-             <div className="h-10 w-10 mr-3 rounded-full bg-muted flex items-center justify-center text-muted-foreground" aria-label={testimonial.author}>
+          {!testimonial.avatarSrc && ( // Fallback for visual representation if no avatar but hint exists
+            <div
+              className="h-10 w-10 mr-3 rounded-full bg-muted flex items-center justify-center text-muted-foreground"
+              aria-label={testimonial.author}
+            >
               {authorInitials}
             </div>
           )}
-          <p className="font-headline text-base font-semibold text-primary">{testimonial.author}</p>
+          <p className="font-headline text-base font-semibold text-primary">
+            {testimonial.author}
+          </p>
         </div>
       </CardContent>
     </Card>
