@@ -97,7 +97,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: "test3",
-    quote: "Best cookies I have ever had! Will definitely order again.",
+    quote: "Best cookies I have ever had! Will definitely treat myself again.",
     author: "Emily K.",
   },
 ];
