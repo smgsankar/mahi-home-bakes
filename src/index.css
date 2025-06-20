@@ -33,9 +33,8 @@
   --radius-md: calc(var(--radius-lg) - 2px);
   --radius-sm: calc(var(--radius-lg) - 4px);
 
-  --font-body: "PT Sans" sans-serif;
-  --font-headline: "Playfair Display" serif;
-  --font-code: monospace;
+  --font-body: "PT Sans", sans-serif;
+  --font-headline: "Playfair Display", serif;
 
   --animate-fade-in: fadeInAnimation 0.8s ease-out forwards;
 
