@@ -77,7 +77,7 @@ export default function ContactSection() {
                   Our Location
                 </h3>
                 <p className="text-muted-foreground">
-                  We are a home-based bakery located in [Your City/Area].
+                  We are a home-based bakery located in Chennai.
                   Pick-up details will be provided upon order confirmation.
                 </p>
               </div>
