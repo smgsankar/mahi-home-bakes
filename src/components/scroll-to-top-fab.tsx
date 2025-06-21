@@ -1,4 +1,3 @@
-import { ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
@@ -7,6 +6,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useEffect, useState } from "react";
+import { ChevronUp } from "./icons/chevron-up";
 
 export default function ScrollToTopFAB() {
   const [visible, setVisible] = useState(false);
