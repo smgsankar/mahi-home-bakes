@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { emailAddress, whatsappLink } from "@/data/content";
-import { Mail, MessageSquare, MapPin } from "lucide-react";
+import { MessageSquare } from "../icons/message";
+import { MapPin } from "../icons/map-pin";
+import { Mail } from "../icons/mail";
 
 export default function ContactSection() {
   return (
