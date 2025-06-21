@@ -1,7 +1,7 @@
 import type { Testimonial } from "@/data/content";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Quote } from "lucide-react";
+import { Quote } from "./icons/quote";
 
 interface TestimonialItemProps {
   testimonial: Testimonial;
