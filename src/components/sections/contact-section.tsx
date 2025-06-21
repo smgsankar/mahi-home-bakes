@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { emailAddress, whatsappNumber } from "@/data/content";
+import { emailAddress, whatsappLink } from "@/data/content";
 import { Mail, MessageSquare, MapPin } from "lucide-react";
 
 export default function ContactSection() {
@@ -10,8 +10,8 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="text-lg text-muted-foreground mb-10 text-center max-w-2xl mx-auto">
-          Have a question? We'd love to hear from you! Reach
-          out via WhatsApp for the quickest response.
+          Have a question? We'd love to hear from you! Reach out via WhatsApp
+          for the quickest response.
         </p>
 
         <div
@@ -36,7 +36,7 @@ export default function ContactSection() {
                   className="mt-2 bg-green-500 hover:bg-green-600 text-white"
                 >
                   <a
-                    href={`https://wa.me/${whatsappNumber.replace(/\D/g, "")}`}
+                    href={whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

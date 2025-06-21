@@ -2,6 +2,10 @@ export const whatsappNumber = "+919342638257";
 export const emailAddress = "mahihomebakes@gmail.com";
 
 export const instagramLink = "https://instagram.com/mahihomebakes";
+export const whatsappLink = `https://wa.me/${whatsappNumber.replace(
+  /\D/g,
+  ""
+)}`;
 
 export interface Product {
   id: string;
