@@ -1,6 +1,8 @@
-import { Instagram, Facebook, ShoppingBag } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { instagramLink } from "@/data/content";
+import { instagramLink, whatsappLink } from "@/data/content";
+import { Instagram } from "../icons/instagram";
+import { Whatsapp } from "../icons/whatsapp";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,18 +24,24 @@ export default function Footer() {
           </div>
 
           <div className="flex justify-center space-x-4">
-            <Button variant="ghost" size="icon" asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="text-muted-foreground hover:text-foreground"
+            >
               <a href={instagramLink} target="_blank" aria-label="Instagram">
-                <Instagram className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+                <Instagram className="h-6 w-6" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-6 w-6 text-muted-foreground hover:text-primary transition-colors" />
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="text-muted-foreground hover:text-foreground"
+            >
+              <a href={whatsappLink} target="_blank" aria-label="Whatsapp">
+                <Whatsapp className="h-6 w-6" />
               </a>
             </Button>
           </div>
@@ -58,7 +66,7 @@ export default function Footer() {
           <a
             target="_blank"
             href="https://github.com/smgsankar"
-            className="text-primary hover:underline"
+            className="text-primary font-bold hover:underline"
           >
             smgsankar
           </a>

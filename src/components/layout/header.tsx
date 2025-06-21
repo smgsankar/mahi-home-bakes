@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Instagram, Facebook, ShoppingBag } from "lucide-react";
-import { instagramLink } from "@/data/content";
+import { ShoppingBag } from "lucide-react";
+import { instagramLink, whatsappLink } from "@/data/content";
+import { Whatsapp } from "../icons/whatsapp";
+import { Instagram } from "../icons/instagram";
+import { Menu } from "../icons/menu";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -63,7 +66,7 @@ export default function Header() {
             <div className="flex items-center space-x-2 pl-4">
               <Button variant="ghost" size="icon" asChild>
                 <a href={instagramLink} target="_blank" aria-label="Instagram">
-                  <Instagram className="h-5 w-5 text-foreground hover:text-primary" />
+                  <Instagram className="h-5 w-5 text-foreground" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
@@ -72,7 +75,7 @@ export default function Header() {
                   target="_blank"
                   aria-label="Facebook"
                 >
-                  <Facebook className="h-5 w-5 text-foreground hover:text-primary" />
+                  <Whatsapp className="h-5 w-5 text-foreground" />
                 </a>
               </Button>
             </div>
@@ -97,7 +100,6 @@ export default function Header() {
                     className="flex items-center gap-2"
                     onClick={handleNavLinkClick}
                   >
-                    {" "}
                     <ShoppingBag className="h-7 w-7 text-primary" />
                     <span className="text-xl font-headline font-bold text-primary">
                       Mahi Home Bakes
@@ -122,16 +124,16 @@ export default function Header() {
                         target="_blank"
                         aria-label="Instagram"
                       >
-                        <Instagram className="h-6 w-6 text-foreground hover:text-primary" />
+                        <Instagram className="h-6 w-6 text-foreground" />
                       </a>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
                       <a
-                        href="https://facebook.com"
+                        href={whatsappLink}
                         target="_blank"
-                        aria-label="Facebook"
+                        aria-label="Whatsapp"
                       >
-                        <Facebook className="h-6 w-6 text-foreground hover:text-primary" />
+                        <Whatsapp className="h-6 w-6 text-foreground" />
                       </a>
                     </Button>
                   </div>
