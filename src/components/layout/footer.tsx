@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 items-center">
           <div className="flex justify-center gap-4">
             <img
-              src="brand-logo.png"
+              src="brand-logo.webp"
               alt="Mahi Home Bakes Logo"
               className="h-32 w-32 rounded-full"
             />

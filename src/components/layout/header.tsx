@@ -46,7 +46,7 @@ export default function Header() {
             onClick={handleNavLinkClick}
           >
             <img
-              src="logo.png"
+              src="logo.webp"
               alt="Mahi Home Bakes Logo"
               className="h-20 w-40"
             />
@@ -102,7 +102,7 @@ export default function Header() {
                     onClick={handleNavLinkClick}
                   >
                     <img
-                      src="logo.png"
+                      src="logo.webp"
                       alt="Mahi Home Bakes Logo"
                       className="h-20 w-40"
                     />
