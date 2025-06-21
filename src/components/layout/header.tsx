@@ -68,7 +68,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-2 pl-4">
             <Button variant="ghost" size="icon" asChild>
               <a href={instagramLink} target="_blank" aria-label="Instagram">
-                <Instagram className="!h-6 !w-6 text-foreground" />
+                <Instagram className="!h-5 !w-5 text-foreground" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
@@ -77,7 +77,7 @@ export default function Header() {
                 target="_blank"
                 aria-label="Facebook"
               >
-                <Whatsapp className="!h-6 !w-6 text-foreground" />
+                <Whatsapp className="!h-5 !w-5 text-foreground" />
               </a>
             </Button>
           </div>
