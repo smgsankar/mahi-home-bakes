@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Tag } from "lucide-react";
+import { Tag } from "./icons/tag";
 
 interface ProductCardProps {
   product: Product;
