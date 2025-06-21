@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { emailAddress, whatsappLink } from "@/data/content";
-import { MessageSquare } from "../icons/message";
+import { MessageSquare } from "../icons/message-square";
 import { MapPin } from "../icons/map-pin";
 import { Mail } from "../icons/mail";
 
