@@ -36,7 +36,7 @@ export default function ScrollToTopFAB() {
             onClick={handleScrollToTop}
             aria-label="Scroll to top"
           >
-            <ChevronUp className="h-7 w-7" />
+            <ChevronUp className="!h-5 !w-5" />
           </Button>
         </TooltipTrigger>
         <TooltipContent

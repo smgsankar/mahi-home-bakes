@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { ShoppingBag } from "lucide-react";
 import { instagramLink, whatsappLink } from "@/data/content";
-import { Whatsapp } from "../icons/whatsapp";
 import { Instagram } from "../icons/instagram";
+import { Whatsapp } from "../icons/whatsapp";
 import { Menu } from "../icons/menu";
 
 const navLinks = [
@@ -46,10 +45,11 @@ export default function Header() {
             className="flex items-center gap-2"
             onClick={handleNavLinkClick}
           >
-            <ShoppingBag className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-headline font-bold text-primary">
-              Mahi Home Bakes
-            </span>
+            <img
+              src="logo.png"
+              alt="Mahi Home Bakes Logo"
+              className="h-20 w-40"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -63,30 +63,31 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <div className="flex items-center space-x-2 pl-4">
-              <Button variant="ghost" size="icon" asChild>
-                <a href={instagramLink} target="_blank" aria-label="Instagram">
-                  <Instagram className="h-5 w-5 text-foreground" />
-                </a>
-              </Button>
-              <Button variant="ghost" size="icon" asChild>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  aria-label="Facebook"
-                >
-                  <Whatsapp className="h-5 w-5 text-foreground" />
-                </a>
-              </Button>
-            </div>
           </nav>
+
+          <div className="hidden md:flex items-center space-x-2 pl-4">
+            <Button variant="ghost" size="icon" asChild>
+              <a href={instagramLink} target="_blank" aria-label="Instagram">
+                <Instagram className="!h-6 !w-6 text-foreground" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <Whatsapp className="!h-6 !w-6 text-foreground" />
+              </a>
+            </Button>
+          </div>
 
           {/* Mobile Navigation Trigger */}
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6 text-primary" />
+                  <Menu className="!h-6 !w-6 text-primary" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
@@ -100,10 +101,11 @@ export default function Header() {
                     className="flex items-center gap-2"
                     onClick={handleNavLinkClick}
                   >
-                    <ShoppingBag className="h-7 w-7 text-primary" />
-                    <span className="text-xl font-headline font-bold text-primary">
-                      Mahi Home Bakes
-                    </span>
+                    <img
+                      src="logo.png"
+                      alt="Mahi Home Bakes Logo"
+                      className="h-20 w-40"
+                    />
                   </a>
                   <nav className="flex flex-col space-y-3">
                     {navLinks.map((link) => (
@@ -124,7 +126,7 @@ export default function Header() {
                         target="_blank"
                         aria-label="Instagram"
                       >
-                        <Instagram className="h-6 w-6 text-foreground" />
+                        <Instagram className="!h-6 !w-6 text-foreground" />
                       </a>
                     </Button>
                     <Button variant="ghost" size="icon" asChild>
@@ -133,7 +135,7 @@ export default function Header() {
                         target="_blank"
                         aria-label="Whatsapp"
                       >
-                        <Whatsapp className="h-6 w-6 text-foreground" />
+                        <Whatsapp className="!h-6 !w-6 text-foreground" />
                       </a>
                     </Button>
                   </div>

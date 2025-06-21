@@ -1,4 +1,3 @@
-import { ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { instagramLink, whatsappLink } from "@/data/content";
 import { Instagram } from "../icons/instagram";
@@ -12,8 +11,12 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 items-center">
           <div className="flex justify-center gap-4">
-            <ShoppingBag className="h-12 w-12 text-primary" />
-            <div className="flex flex-col">
+            <img
+              src="brand-logo.png"
+              alt="Mahi Home Bakes Logo"
+              className="h-32 w-32 rounded-full"
+            />
+            <div className="flex flex-col justify-center items-center md:items-start">
               <span className="text-xl font-headline font-bold text-primary">
                 Mahi Home Bakes
               </span>
@@ -31,7 +34,7 @@ export default function Footer() {
               className="text-muted-foreground hover:text-foreground"
             >
               <a href={instagramLink} target="_blank" aria-label="Instagram">
-                <Instagram className="h-6 w-6" />
+                <Instagram className="!h-6 !w-6" />
               </a>
             </Button>
             <Button
@@ -41,7 +44,7 @@ export default function Footer() {
               className="text-muted-foreground hover:text-foreground"
             >
               <a href={whatsappLink} target="_blank" aria-label="Whatsapp">
-                <Whatsapp className="h-6 w-6" />
+                <Whatsapp className="!h-6 !w-6" />
               </a>
             </Button>
           </div>
