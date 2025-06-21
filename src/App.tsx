@@ -10,7 +10,7 @@ import ContactSection from "./components/sections/contact-section";
 
 function App() {
   return (
-    <div className="font-body antialiased">
+    <>
       <Header />
       <main>
         <HeroSection />
@@ -22,7 +22,7 @@ function App() {
       </main>
       <ScrollToTopFAB />
       <Footer />
-    </div>
+    </>
   );
 }
 
