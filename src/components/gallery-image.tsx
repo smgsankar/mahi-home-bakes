@@ -1,17 +1,16 @@
 import type { GalleryImage as GalleryImageProps } from "@/data/content";
 import { Card, CardContent } from "@/components/ui/card";
+import { useFadeInOnView } from "@/lib/use-fade-on-view";
 
 interface Props {
   image: GalleryImageProps;
-  animationDelay?: string;
+  animationDelay?: number;
 }
 
-export default function GalleryImage({ image, animationDelay = "0s" }: Props) {
+export default function GalleryImage({ image, animationDelay }: Props) {
+  const fadeInRef = useFadeInOnView<HTMLDivElement>(animationDelay);
   return (
-    <Card
-      className="overflow-hidden group animate-fade-in"
-      style={{ animationDelay }}
-    >
+    <Card ref={fadeInRef} className="overflow-hidden group">
       <CardContent className="p-0">
         <div className="aspect-square relative w-full">
           <img
