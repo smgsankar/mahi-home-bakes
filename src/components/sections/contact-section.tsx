@@ -3,22 +3,27 @@ import { emailAddress, whatsappLink } from "@/data/content";
 import { MessageSquare } from "../icons/message-square";
 import { MapPin } from "../icons/map-pin";
 import { Mail } from "../icons/mail";
+import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 
 export default function ContactSection() {
+  const contentRef = useFadeInOnView<HTMLDivElement>(200);
+  const cardRef = useFadeInOnView<HTMLDivElement>(400);
   return (
     <section id="contact" className="bg-card py-12 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary mb-4 text-center">
-          Get in Touch
-        </h2>
-        <p className="text-lg text-muted-foreground mb-10 text-center max-w-2xl mx-auto">
-          Have a question? We'd love to hear from you! Reach out via WhatsApp
-          for the quickest response.
-        </p>
+        <div ref={contentRef}>
+          <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary mb-4 text-center">
+            Get in Touch
+          </h2>
+          <p className="text-lg text-muted-foreground mb-10 text-center max-w-2xl mx-auto">
+            Have a question? We'd love to hear from you! Reach out via WhatsApp
+            for the quickest response.
+          </p>
+        </div>
 
         <div
-          className="max-w-lg mx-auto bg-background p-8 rounded-lg shadow-xl animate-fade-in"
-          style={{ animationDelay: "0.2s" }}
+          ref={cardRef}
+          className="max-w-lg mx-auto bg-background p-8 rounded-lg shadow-xl"
         >
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
