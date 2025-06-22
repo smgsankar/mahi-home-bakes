@@ -11,9 +11,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-card text-card-foreground border-t border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-4">
+      <div
+        ref={fadeInRef}
+        className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-4"
+      >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 items-center">
-          <div ref={fadeInRef} className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4">
             <img
               src="brand-logo.webp"
               alt="Mahi Home Bakes Logo"
