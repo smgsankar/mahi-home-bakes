@@ -7,21 +7,20 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tag } from "./icons/tag";
+import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 
 interface ProductCardProps {
   product: Product;
-  animationDelay?: string;
+  animationDelay?: number;
 }
 
 export default function ProductCard({
   product,
-  animationDelay = "0s",
+  animationDelay,
 }: ProductCardProps) {
+  const fadeInRef = useFadeInOnView<HTMLDivElement>(animationDelay);
   return (
-    <Card
-      className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out h-full flex flex-col opacity-0 animate-fade-in"
-      style={{ animationDelay }}
-    >
+    <Card ref={fadeInRef} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out h-full flex flex-col opacity-0">
       <CardHeader className="p-0">
         <div className="aspect-video relative w-full">
           <img
