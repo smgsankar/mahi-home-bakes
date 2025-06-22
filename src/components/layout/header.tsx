@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { instagramLink, whatsappLink } from "@/data/content";
@@ -8,149 +8,158 @@ import { Menu } from "../icons/menu";
 import { scrollToSection } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#products", label: "Products" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#contact", label: "Contact" },
+	{ href: "#home", label: "Home" },
+	{ href: "#products", label: "Products" },
+	{ href: "#gallery", label: "Gallery" },
+	{ href: "#testimonials", label: "Testimonials" },
+	{ href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [showHeader, setShowHeader] = useState(true);
+	const lastScrollY = useRef(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+			setIsScrolled(currentScrollY > 20);
+			if (currentScrollY > lastScrollY.current && currentScrollY > 180) {
+				setShowHeader(false);
+			} else {
+				setShowHeader(true);
+			}
+			lastScrollY.current = currentScrollY;
+		};
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
-  const handleNavLinkClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href?: string
-  ) => {
-    scrollToSection(e, href);
-    if (isMobileMenuOpen) setIsMobileMenuOpen(false);
-  };
+	const handleNavLinkClick = (
+		e: React.MouseEvent<HTMLAnchorElement>,
+		href?: string
+	) => {
+		scrollToSection(e, href);
+		if (isMobileMenuOpen) setIsMobileMenuOpen(false);
+	};
 
-  return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${
-        isScrolled
-          ? "bg-background/80 shadow-lg backdrop-blur-md"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          <a
-            href="#home"
-            className="flex items-center gap-2"
-            onClick={handleNavLinkClick}
-          >
-            <img
-              src="logo.webp"
-              alt="Mahi Home Bakes Logo"
-              className="h-20 w-40"
-            />
-          </a>
+	return (
+		<header
+			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
+				isScrolled
+					? "bg-background/80 shadow-lg backdrop-blur-md"
+					: "bg-transparent"
+			} ${showHeader ? "translate-y-0" : "-translate-y-full"}`}
+		>
+			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="flex h-20 items-center justify-between">
+					<a
+						href="#home"
+						className="flex items-center gap-2"
+						onClick={handleNavLinkClick}
+					>
+						<img
+							src="logo.webp"
+							alt="Mahi Home Bakes Logo"
+							className="h-20 w-40"
+						/>
+					</a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                onClick={(e) => handleNavLinkClick(e, link.href)}
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+					{/* Desktop Navigation */}
+					<nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
+						{navLinks.map((link) => (
+							<a
+								key={link.href}
+								href={link.href}
+								className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+								onClick={(e) => handleNavLinkClick(e, link.href)}
+							>
+								{link.label}
+							</a>
+						))}
+					</nav>
 
-          <div className="hidden md:flex items-center space-x-2 pl-4">
-            <Button variant="ghost" size="icon" asChild>
-              <a href={instagramLink} target="_blank" aria-label="Instagram">
-                <Instagram className="!h-5 !w-5 text-foreground" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <Whatsapp className="!h-5 !w-5 text-foreground" />
-              </a>
-            </Button>
-          </div>
+					<div className="hidden md:flex items-center space-x-2 pl-4">
+						<Button variant="ghost" size="icon" asChild>
+							<a href={instagramLink} target="_blank" aria-label="Instagram">
+								<Instagram className="!h-5 !w-5 text-foreground" />
+							</a>
+						</Button>
+						<Button variant="ghost" size="icon" asChild>
+							<a
+								href="https://facebook.com"
+								target="_blank"
+								aria-label="Facebook"
+							>
+								<Whatsapp className="!h-5 !w-5 text-foreground" />
+							</a>
+						</Button>
+					</div>
 
-          {/* Mobile Navigation Trigger */}
-          <div className="md:hidden">
-            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="!h-6 !w-6 text-primary" />
-                  <span className="sr-only">Open menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent
-                side="right"
-                className="w-full max-w-xs bg-background p-6"
-              >
-                <div className="flex flex-col space-y-6">
-                  <a
-                    href="#home"
-                    className="flex items-center gap-2"
-                    onClick={handleNavLinkClick}
-                  >
-                    <img
-                      src="logo.webp"
-                      alt="Mahi Home Bakes Logo"
-                      className="h-20 w-40"
-                    />
-                  </a>
-                  <nav className="flex flex-col space-y-3">
-                    {navLinks.map((link) => (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        onClick={(e) => handleNavLinkClick(e, link.href)}
-                        className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
-                  </nav>
-                  <div className="flex items-center justify-center space-x-4 pt-4 border-t border-border">
-                    <Button variant="ghost" size="icon" asChild>
-                      <a
-                        href={instagramLink}
-                        target="_blank"
-                        aria-label="Instagram"
-                      >
-                        <Instagram className="!h-6 !w-6 text-foreground" />
-                      </a>
-                    </Button>
-                    <Button variant="ghost" size="icon" asChild>
-                      <a
-                        href={whatsappLink}
-                        target="_blank"
-                        aria-label="Whatsapp"
-                      >
-                        <Whatsapp className="!h-6 !w-6 text-foreground" />
-                      </a>
-                    </Button>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
+					{/* Mobile Navigation Trigger */}
+					<div className="md:hidden">
+						<Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+							<SheetTrigger asChild>
+								<Button variant="ghost" size="icon">
+									<Menu className="!h-6 !w-6 text-primary" />
+									<span className="sr-only">Open menu</span>
+								</Button>
+							</SheetTrigger>
+							<SheetContent
+								side="right"
+								className="w-full max-w-xs bg-background p-6"
+							>
+								<div className="flex flex-col space-y-6">
+									<a
+										href="#home"
+										className="flex items-center gap-2"
+										onClick={handleNavLinkClick}
+									>
+										<img
+											src="logo.webp"
+											alt="Mahi Home Bakes Logo"
+											className="h-20 w-40"
+										/>
+									</a>
+									<nav className="flex flex-col space-y-3">
+										{navLinks.map((link) => (
+											<a
+												key={link.href}
+												href={link.href}
+												onClick={(e) => handleNavLinkClick(e, link.href)}
+												className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+											>
+												{link.label}
+											</a>
+										))}
+									</nav>
+									<div className="flex items-center justify-center space-x-4 pt-4 border-t border-border">
+										<Button variant="ghost" size="icon" asChild>
+											<a
+												href={instagramLink}
+												target="_blank"
+												aria-label="Instagram"
+											>
+												<Instagram className="!h-6 !w-6 text-foreground" />
+											</a>
+										</Button>
+										<Button variant="ghost" size="icon" asChild>
+											<a
+												href={whatsappLink}
+												target="_blank"
+												aria-label="Whatsapp"
+											>
+												<Whatsapp className="!h-6 !w-6 text-foreground" />
+											</a>
+										</Button>
+									</div>
+								</div>
+							</SheetContent>
+						</Sheet>
+					</div>
+				</div>
+			</div>
+		</header>
+	);
 }
