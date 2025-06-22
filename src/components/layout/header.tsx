@@ -5,6 +5,7 @@ import { instagramLink, whatsappLink } from "@/data/content";
 import { Instagram } from "../icons/instagram";
 import { Whatsapp } from "../icons/whatsapp";
 import { Menu } from "../icons/menu";
+import { scrollToSection } from "@/lib/utils";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -26,8 +27,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavLinkClick = () => {
-    setIsMobileMenuOpen(false);
+  const handleNavLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href?: string
+  ) => {
+    scrollToSection(e, href);
+    if (isMobileMenuOpen) setIsMobileMenuOpen(false);
   };
 
   return (
@@ -59,6 +64,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                onClick={(e) => handleNavLinkClick(e, link.href)}
               >
                 {link.label}
               </a>
@@ -112,7 +118,7 @@ export default function Header() {
                       <a
                         key={link.href}
                         href={link.href}
-                        onClick={handleNavLinkClick}
+                        onClick={(e) => handleNavLinkClick(e, link.href)}
                         className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
                       >
                         {link.label}

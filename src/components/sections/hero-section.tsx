@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { scrollToSection } from "@/lib/utils";
 
 export default function HeroSection() {
+  const scrollToProducts = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    scrollToSection(e, "#products");
+  };
   return (
     <section
       id="home"
@@ -38,7 +42,9 @@ export default function HeroSection() {
               asChild
               className="bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground transition-colors duration-300 shadow-lg"
             >
-              <a href="#products">Explore Our Bakes</a>
+              <a href="#products" onClick={scrollToProducts}>
+                Explore Our Bakes
+              </a>
             </Button>
           </div>
         </div>
