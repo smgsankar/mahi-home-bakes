@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const allowedDelays = [100, 200, 300, 400, 500];
+const allowedDelays = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
 
 export function useFadeInOnView<T extends HTMLElement>(delay?: number) {
   const ref = useRef<T | null>(null);

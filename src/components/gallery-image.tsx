@@ -1,6 +1,6 @@
 import type { GalleryImage as GalleryImageProps } from "@/data/content";
 import { Card, CardContent } from "@/components/ui/card";
-import { useFadeInOnView } from "@/lib/use-fade-on-view";
+import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 
 interface Props {
   image: GalleryImageProps;

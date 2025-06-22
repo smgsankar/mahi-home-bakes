@@ -2,7 +2,7 @@ import type { Testimonial } from "@/data/content";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Quote } from "./icons/quote";
-import { useFadeInOnView } from "@/lib/use-fade-on-view";
+import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 
 interface TestimonialItemProps {
   testimonial: Testimonial;

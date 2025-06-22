@@ -1,6 +1,6 @@
 import { testimonials } from "@/data/content";
 import TestimonialItem from "@/components/testimonial-item";
-import { useFadeInOnView } from "@/lib/use-fade-on-view";
+import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 
 export default function TestimonialsSection() {
   const fadeInRef = useFadeInOnView<HTMLDivElement>(100);
