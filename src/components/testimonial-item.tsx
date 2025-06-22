@@ -2,16 +2,18 @@ import type { Testimonial } from "@/data/content";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Quote } from "./icons/quote";
+import { useFadeInOnView } from "@/lib/use-fade-on-view";
 
 interface TestimonialItemProps {
   testimonial: Testimonial;
-  animationDelay?: string;
+  animationDelay?: number;
 }
 
 export default function TestimonialItem({
   testimonial,
-  animationDelay = "0s",
+  animationDelay,
 }: TestimonialItemProps) {
+  const fadeInRef = useFadeInOnView<HTMLDivElement>(animationDelay);
   const authorInitials = testimonial.author
     .split(" ")
     .map((n) => n[0])
@@ -19,8 +21,8 @@ export default function TestimonialItem({
 
   return (
     <Card
-      className="bg-accent/20 border-accent shadow-lg animate-fade-in h-full"
-      style={{ animationDelay }}
+      ref={fadeInRef}
+      className="bg-accent/20 border-accent shadow-lg h-full"
     >
       <CardContent className="p-6 flex flex-col items-center text-center h-full">
         <Quote className="w-8 h-8 text-accent mb-4" />

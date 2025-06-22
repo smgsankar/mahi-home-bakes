@@ -1,10 +1,12 @@
 import { testimonials } from "@/data/content";
 import TestimonialItem from "@/components/testimonial-item";
+import { useFadeInOnView } from "@/lib/use-fade-on-view";
 
 export default function TestimonialsSection() {
+  const fadeInRef = useFadeInOnView<HTMLDivElement>(100);
   return (
     <section id="testimonials" className="bg-background py-12 md:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div ref={fadeInRef} className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary mb-4 text-center">
           Words from Our Happy Customers
         </h2>
@@ -17,7 +19,7 @@ export default function TestimonialsSection() {
             <TestimonialItem
               key={testimonial.id}
               testimonial={testimonial}
-              animationDelay={`${0.2 + index * 0.1}s`}
+              animationDelay={200 + index * 100}
             />
           ))}
         </div>
