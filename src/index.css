@@ -51,9 +51,7 @@
       transform: translateY(0);
     }
   }
-}
 
-@theme inline {
   --animation-delay-0: 0s;
   --animation-delay-75: 75ms;
   --animation-delay-100: 0.1s;
