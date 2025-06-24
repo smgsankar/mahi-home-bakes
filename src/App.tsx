@@ -20,8 +20,8 @@ function App() {
         <TestimonialsSection />
         <ContactSection />
       </main>
-      <ScrollToTopFAB />
       <Footer />
+      <ScrollToTopFAB />
     </>
   );
 }

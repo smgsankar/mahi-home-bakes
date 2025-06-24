@@ -32,7 +32,7 @@ export default function ScrollToTopFAB() {
           <Button
             variant="default"
             size="icon"
-            className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-xl bg-primary hover:bg-primary/80 text-white animate-fade-in"
+            className="fixed bottom-6 right-6 h-14 w-14 rounded-full cursor-pointer shadow-xl bg-primary hover:bg-primary/80 text-white animate-fade-in"
             onClick={handleScrollToTop}
             aria-label="Scroll to top"
           >
