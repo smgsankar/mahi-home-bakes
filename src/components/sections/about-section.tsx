@@ -1,14 +1,14 @@
 import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 
 export default function AboutSection() {
-  const imageRef = useFadeInOnView<HTMLDivElement>(200);
-  const contentRef = useFadeInOnView<HTMLHeadingElement>(400);
+  const imageRef = useFadeInOnView<HTMLDivElement>();
+  const contentRef = useFadeInOnView<HTMLHeadingElement>();
 
   return (
     <section id="about" className="bg-card py-12 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div ref={imageRef}>
+          <div ref={imageRef} className="delay-200">
             <img
               src="https://placehold.co/900x600.png" // Replace here
               alt="Mahi Home Bakes - The Baker"
@@ -17,7 +17,7 @@ export default function AboutSection() {
               className="rounded-lg shadow-xl object-cover aspect-video"
             />
           </div>
-          <div ref={contentRef}>
+          <div ref={contentRef} className="delay-400">
             <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary mb-6">
               Baked with Love, From Our Home to Yours
             </h2>

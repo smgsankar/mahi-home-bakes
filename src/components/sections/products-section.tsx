@@ -12,7 +12,7 @@ const categories: Product["category"][] = [
 ];
 
 export default function ProductsSection() {
-  const fadeInRef = useFadeInOnView<HTMLDivElement>(200);
+  const fadeInRef = useFadeInOnView<HTMLDivElement>();
   const [selectedCategory, setSelectedCategory] = useState<
     Product["category"] | "All"
   >("All");
@@ -25,7 +25,7 @@ export default function ProductsSection() {
   return (
     <section id="products" className="bg-background py-12 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={fadeInRef}>
+        <div ref={fadeInRef} className="delay-200">
           <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary mb-4 text-center">
             Our Delicious Offerings
           </h2>
@@ -34,10 +34,7 @@ export default function ProductsSection() {
             any occasion or just a sweet treat for yourself.
           </p>
 
-          <div
-            className="flex justify-center flex-wrap gap-2 mb-10 animate-fade-in"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <div className="flex justify-center flex-wrap gap-2 mb-10">
             <Button
               variant={selectedCategory === "All" ? "default" : "outline"}
               onClick={() => setSelectedCategory("All")}
@@ -63,8 +60,8 @@ export default function ProductsSection() {
             key={selectedCategory}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+            {filteredProducts.map((product, index) => (
+              <ProductCard key={product.id} product={product} index={index} />
             ))}
           </div>
         ) : (

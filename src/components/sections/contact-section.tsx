@@ -6,12 +6,12 @@ import { Mail } from "../icons/mail";
 import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 
 export default function ContactSection() {
-  const contentRef = useFadeInOnView<HTMLDivElement>(200);
-  const cardRef = useFadeInOnView<HTMLDivElement>(400);
+  const contentRef = useFadeInOnView<HTMLDivElement>();
+  const cardRef = useFadeInOnView<HTMLDivElement>();
   return (
     <section id="contact" className="bg-card py-12 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={contentRef}>
+        <div ref={contentRef} className="delay-200">
           <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary mb-4 text-center">
             Get in Touch
           </h2>
@@ -23,7 +23,7 @@ export default function ContactSection() {
 
         <div
           ref={cardRef}
-          className="max-w-lg mx-auto bg-background p-8 rounded-lg shadow-xl"
+          className="max-w-lg mx-auto bg-background p-8 rounded-lg shadow-xl delay-400"
         >
           <div className="space-y-6">
             <div className="flex items-start space-x-4">

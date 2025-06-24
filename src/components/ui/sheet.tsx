@@ -56,6 +56,10 @@ const SheetContent = React.forwardRef<
   SheetContentProps
 >(({ side = "right", className, children, ...props }, ref) => (
   <SheetPortal>
+    <SheetPrimitive.Title className="sr-only">Navigation</SheetPrimitive.Title>
+    <SheetPrimitive.Description className="sr-only">
+      Use the navigation to explore the site.
+    </SheetPrimitive.Description>
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}

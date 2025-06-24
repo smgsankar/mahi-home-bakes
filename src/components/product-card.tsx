@@ -8,19 +8,23 @@ import {
 } from "@/components/ui/card";
 import { Tag } from "./icons/tag";
 import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
+import { cn, getResponsiveTransitionDelay } from "@/lib/utils";
 
 interface ProductCardProps {
   product: Product;
-  animationDelay?: number;
+  index: number;
 }
 
-export default function ProductCard({
-  product,
-  animationDelay,
-}: ProductCardProps) {
-  const fadeInRef = useFadeInOnView<HTMLDivElement>(animationDelay);
+export default function ProductCard({ product, index }: ProductCardProps) {
+  const fadeInRef = useFadeInOnView<HTMLDivElement>();
   return (
-    <Card ref={fadeInRef} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out h-full flex flex-col opacity-0">
+    <Card
+      ref={fadeInRef}
+      className={cn(
+        "overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out h-full flex flex-col",
+        getResponsiveTransitionDelay(index)
+      )}
+    >
       <CardHeader className="p-0">
         <div className="aspect-video relative w-full">
           <img

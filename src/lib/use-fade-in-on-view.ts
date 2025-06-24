@@ -1,8 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const allowedDelays = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
-
-export function useFadeInOnView<T extends HTMLElement>(delay?: number) {
+export function useFadeInOnView<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
 
   useEffect(() => {
@@ -18,10 +16,7 @@ export function useFadeInOnView<T extends HTMLElement>(delay?: number) {
       });
     };
 
-    node.classList.add("opacity-0"); // Start hidden
-    if (typeof delay === "number" && allowedDelays.includes(delay)) {
-      node.classList.add(`delay-${delay}`);
-    }
+    node.classList.add("opacity-0");
 
     const observer = new window.IntersectionObserver(handleIntersect, {
       threshold: 0.2,
@@ -29,7 +24,7 @@ export function useFadeInOnView<T extends HTMLElement>(delay?: number) {
 
     observer.observe(node);
     return () => observer.disconnect();
-  }, [delay]);
+  }, []);
 
   return ref;
 }

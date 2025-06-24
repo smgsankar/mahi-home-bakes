@@ -3,11 +3,11 @@ import GalleryImage from "@/components/gallery-image";
 import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 
 export default function GallerySection() {
-  const fadeInRef = useFadeInOnView<HTMLDivElement>(100);
+  const fadeInRef = useFadeInOnView<HTMLDivElement>();
   return (
     <section id="gallery" className="bg-card py-12 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={fadeInRef}>
+        <div ref={fadeInRef} className="delay-200">
           <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary mb-4 text-center">
             Our Sweet Creations
           </h2>
@@ -16,13 +16,9 @@ export default function GallerySection() {
             inspired for your next event!
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {galleryImages.map((image, index) => (
-            <GalleryImage
-              key={image.id}
-              image={image}
-              animationDelay={200 + index * 100}
-            />
+            <GalleryImage key={image.id} image={image} index={index} />
           ))}
         </div>
       </div>

@@ -1,10 +1,16 @@
 import { Button } from "@/components/ui/button";
+import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 import { scrollToSection } from "@/lib/utils";
 
 export default function HeroSection() {
   const scrollToProducts = (e: React.MouseEvent<HTMLAnchorElement>) => {
     scrollToSection(e, "#products");
   };
+
+  const headingRef = useFadeInOnView<HTMLHeadingElement>();
+  const paragraphRef = useFadeInOnView<HTMLParagraphElement>();
+  const ctaRef = useFadeInOnView<HTMLDivElement>();
+
   return (
     <section
       id="home"
@@ -20,23 +26,20 @@ export default function HeroSection() {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <div className="max-w-3xl mx-auto">
           <h1
-            className="text-5xl md:text-7xl font-headline font-bold text-primary mb-6 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.2s" }}
+            ref={headingRef}
+            className="text-5xl md:text-7xl font-headline font-bold text-primary mb-6 delay-200"
           >
             Mahi Home Bakes
           </h1>
           <p
-            className="text-lg md:text-xl text-foreground mb-10 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.4s" }}
+            ref={paragraphRef}
+            className="text-lg md:text-xl text-foreground mb-10 delay-400"
           >
             Crafting sweet moments with love and passion. Discover our
             delightful range of celebration cakes, cupcakes, cookies, and
             chocolates.
           </p>
-          <div
-            className="opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.6s" }}
-          >
+          <div ref={ctaRef} className="delay-600">
             <Button
               size="lg"
               asChild

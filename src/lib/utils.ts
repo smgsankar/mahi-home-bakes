@@ -17,3 +17,9 @@ export function scrollToSection(
     }
   }
 }
+
+export function getResponsiveTransitionDelay(index: number, baseDelay = 200) {
+  const smDelay = baseDelay + (index % 2) * 300;
+  const lgDelay = baseDelay + (index % 3) * 300;
+  return `delay-${baseDelay} sm:delay-${smDelay} lg:delay-${lgDelay}`;
+}

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@source inline("{sm:,lg:,}delay-{100..1000..100}");
+
 @theme {
   --color-background: hsl(60 56% 91%);
   --color-foreground: hsl(240 10% 10%);
@@ -63,6 +65,7 @@
   --animation-delay-600: 0.6s;
   --animation-delay-700: 0.7s;
   --animation-delay-800: 0.8s;
+  --animation-delay-900: 0.9s;
   --animation-delay-1000: 1s;
 
   --animation-repeat-0: 0;
