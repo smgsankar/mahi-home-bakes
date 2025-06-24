@@ -49,9 +49,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      {/* Subtle decorative elements */}
-      <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-accent/10 rounded-full blur-3xl opacity-50 animate-pulse" />
-      <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-primary/10 rounded-full blur-3xl opacity-50 animate-pulse delay-1000" />
     </section>
   );
 }
