@@ -1,9 +1,8 @@
 import type { Testimonial } from "@/data/content";
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Quote } from "./icons/quote";
 import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 import { cn, getResponsiveTransitionDelay } from "@/lib/utils";
+import { Quote } from "./icons/quote";
 
 interface TestimonialItemProps {
   testimonial: Testimonial;
@@ -15,10 +14,6 @@ export default function TestimonialItem({
   index,
 }: TestimonialItemProps) {
   const fadeInRef = useFadeInOnView<HTMLDivElement>();
-  const authorInitials = testimonial.author
-    .split(" ")
-    .map((n) => n[0])
-    .join("");
 
   return (
     <Card
@@ -30,10 +25,10 @@ export default function TestimonialItem({
     >
       <CardContent className="p-6 flex flex-col items-center text-center h-full">
         <Quote className="w-8 h-8 text-accent mb-4" />
-        <p className="text-foreground italic mb-6 flex-grow">
+        <p className="text-foreground italic mb-6 flex-grow flex items-center">
           "{testimonial.quote}"
         </p>
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           {testimonial.avatarSrc && (
             <Avatar className="h-10 w-10 mr-3">
               <AvatarImage
@@ -54,7 +49,7 @@ export default function TestimonialItem({
           <p className="font-headline text-base font-semibold text-primary">
             {testimonial.author}
           </p>
-        </div>
+        </div> */}
       </CardContent>
     </Card>
   );

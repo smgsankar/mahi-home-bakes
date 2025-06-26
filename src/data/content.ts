@@ -19,8 +19,6 @@ export interface Product {
 export interface Testimonial {
   id: string;
   quote: string;
-  author: string;
-  avatarSrc?: string;
 }
 
 export interface GalleryImage {
@@ -91,20 +89,17 @@ export const testimonials: Testimonial[] = [
   {
     id: "test1",
     quote:
-      "Mahi's cake was the highlight of our party! Absolutely delicious and beautifully decorated.",
-    author: "Sarah L.",
-    avatarSrc: "https://placehold.co/100x100.png",
+      "It's fantastic to have so many healthy cake and muffin options without having to compromise your taste buds",
   },
   {
     id: "test2",
-    quote: "The cupcakes were a huge hit at the office. Everyone loved them!",
-    author: "John B.",
-    avatarSrc: "https://placehold.co/100x100.png",
+    quote:
+      "Very friendly approach and very much attentive to details we give for customisation.",
   },
   {
     id: "test3",
-    quote: "Best cookies I have ever had! Will definitely treat myself again.",
-    author: "Emily K.",
+    quote:
+      "I would highly recommend Mahi home bakes if you're looking for a guilt free indulgence!",
   },
 ];
 
