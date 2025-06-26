@@ -7,14 +7,14 @@ export default function AboutSection() {
   return (
     <section id="about" className="bg-card py-12 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div ref={imageRef} className="delay-200">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div ref={imageRef} className="delay-200 flex justify-center">
             <img
-              src="https://placehold.co/900x600.png" // Replace here
-              alt="Mahi Home Bakes - The Baker"
+              src="showcase.webp"
+              alt="Mahi Home Bakes - Showcase"
               width={600}
               height={400}
-              className="rounded-lg shadow-xl object-cover aspect-video"
+              className="rounded-lg shadow-xl object-cover"
             />
           </div>
           <div ref={contentRef} className="delay-400">
