@@ -16,11 +16,6 @@ export interface Product {
   category: "Cakes" | "Cupcakes" | "Cookies" | "Chocolates";
 }
 
-export interface Testimonial {
-  id: string;
-  quote: string;
-}
-
 export interface GalleryImage {
   id: string;
   src: string;
@@ -85,22 +80,10 @@ export const products: Product[] = [
   },
 ];
 
-export const testimonials: Testimonial[] = [
-  {
-    id: "test1",
-    quote:
-      "It's fantastic to have so many healthy cake and muffin options without having to compromise your taste buds",
-  },
-  {
-    id: "test2",
-    quote:
-      "Very friendly approach and very much attentive to details we give for customisation.",
-  },
-  {
-    id: "test3",
-    quote:
-      "I would highly recommend Mahi home bakes if you're looking for a guilt free indulgence!",
-  },
+export const testimonials: string[] = [
+  "It's fantastic to have so many healthy cake and muffin options without having to compromise your taste buds",
+  "Very friendly approach and very much attentive to details we give for customisation.",
+  "I would highly recommend Mahi home bakes if you're looking for a guilt free indulgence!",
 ];
 
 export const galleryImages: GalleryImage[] = [
