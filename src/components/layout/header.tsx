@@ -60,9 +60,10 @@ export default function Header() {
             onClick={handleNavLinkClick}
           >
             <img
+              height={80}
+              width={160}
               src="logo.webp"
               alt="Mahi Home Bakes Logo"
-              className="h-20 w-40"
             />
           </a>
 
