@@ -87,7 +87,7 @@ export const testimonials: string[] = [
 export const galleryImages: GalleryImage[] = [
   {
     src: "/gallery/gallery1.jpg",
-    alt: "Tower themed birthday cake",
+    alt: "Tower themed birthday cake with special pops and muffins",
   },
   {
     src: "/gallery/gallery2.jpg",
