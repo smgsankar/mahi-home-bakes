@@ -17,10 +17,8 @@ export interface Product {
 }
 
 export interface GalleryImage {
-  id: string;
   src: string;
   alt: string;
-  category: string;
 }
 
 export const products: Product[] = [
@@ -88,39 +86,27 @@ export const testimonials: string[] = [
 
 export const galleryImages: GalleryImage[] = [
   {
-    id: "gal1",
-    src: "https://placehold.co/600x600.png",
-    alt: "Wedding Cake",
-    category: "Cakes",
+    src: "/gallery/gallery1.jpg",
+    alt: "Tower themed birthday cake",
   },
   {
-    id: "gal2",
-    src: "https://placehold.co/600x600.png",
-    alt: "Birthday Cupcakes",
-    category: "Cupcakes",
+    src: "/gallery/gallery2.jpg",
+    alt: "Rasamalai celebration cake",
   },
   {
-    id: "gal3",
-    src: "https://placehold.co/600x600.png",
-    alt: "Artisan Cookies",
-    category: "Cookies",
+    src: "/gallery/gallery3.jpg",
+    alt: "Minion themed birthday cake",
   },
   {
-    id: "gal4",
-    src: "https://placehold.co/600x600.png",
-    alt: "Handmade Chocolates",
-    category: "Chocolates",
+    src: "/gallery/gallery4.jpg",
+    alt: "Rose themed birthday cake",
   },
   {
-    id: "gal5",
-    src: "https://placehold.co/600x600.png",
-    alt: "Custom Cake Design",
-    category: "Cakes",
+    src: "/gallery/gallery5.jpg",
+    alt: "Butterfly themed birthday cake",
   },
   {
-    id: "gal6",
-    src: "https://placehold.co/600x600.png",
-    alt: "Cupcake Assortment",
-    category: "Cupcakes",
+    src: "/gallery/gallery6.jpg",
+    alt: "Dark chocolate birthday cake",
   },
 ];

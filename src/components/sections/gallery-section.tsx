@@ -18,7 +18,7 @@ export default function GallerySection() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((image, index) => (
-            <GalleryImage key={image.id} image={image} index={index} />
+            <GalleryImage key={image.src} image={image} index={index} />
           ))}
         </div>
       </div>
