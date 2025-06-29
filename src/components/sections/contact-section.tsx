@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { emailAddress, whatsappLink } from "@/data/content";
+import { emailAddress, googleLink, whatsappLink } from "@/data/content";
 import { MessageSquare } from "../icons/message-square";
 import { MapPin } from "../icons/map-pin";
 import { Mail } from "../icons/mail";
@@ -84,6 +84,13 @@ export default function ContactSection() {
                 <p className="text-muted-foreground">
                   We are a home-based bakery located in Mannivakkam, Chennai.
                 </p>
+                <a
+                  target="_blank"
+                  href={googleLink}
+                  className="text-primary hover:underline break-all"
+                >
+                  View on Google
+                </a>
               </div>
             </div>
           </div>

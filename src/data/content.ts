@@ -1,5 +1,6 @@
 export const whatsappNumber = "+919342638257";
 export const emailAddress = "mahihomebakes@gmail.com";
+export const googleLink = "https://g.co/kgs/Zpj66eM";
 
 export const instagramLink = "https://instagram.com/mahihomebakes";
 export const whatsappLink = `https://wa.me/${whatsappNumber.replace(
