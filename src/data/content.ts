@@ -7,13 +7,15 @@ export const whatsappLink = `https://wa.me/${whatsappNumber.replace(
   ""
 )}`;
 
+export type ProductTag = "Cakes" | "Muffins" | "Cookies" | "Chocolates" | "All";
+
 export interface Product {
-  id: string;
+  id: number;
   name: string;
   description: string;
   imageSrc: string;
   imageAlt: string;
-  category: "Cakes" | "Cupcakes" | "Cookies" | "Chocolates";
+  category: ProductTag[];
 }
 
 export interface GalleryImage {
@@ -23,58 +25,66 @@ export interface GalleryImage {
 
 export const products: Product[] = [
   {
-    id: "prod1",
-    name: "Vanilla Dream Cake",
+    id: 1,
+    name: "Themed Celebration Cake",
     description:
-      "Classic vanilla sponge with rich buttercream frosting, perfect for any celebration.",
-    imageSrc: "https://placehold.co/600x400.png",
-    imageAlt: "Vanilla Dream Cake",
-    category: "Cakes",
+      "Special themed cakes customized to cheer up your celebrations.",
+    imageSrc: "/catalog/product-themed-cake.webp",
+    imageAlt: "Spiderman themed birthday cake",
+    category: ["Cakes", "All"],
   },
   {
-    id: "prod2",
-    name: "Red Velvet Cupcakes",
-    description:
-      "Moist red velvet cupcakes with a tangy cream cheese frosting.",
-    imageSrc: "https://placehold.co/600x400.png",
-    imageAlt: "Red Velvet Cupcakes",
-    category: "Cupcakes",
+    id: 2,
+    name: "Red Velvet Muffins",
+    description: "Moist red velvet muffins with a tangy cream cheese frosting.",
+    imageSrc: "/catalog/product-red-velvet-muffins.webp",
+    imageAlt: "Red Velvet Muffins",
+    category: ["Muffins", "All"],
   },
   {
-    id: "prod3",
+    id: 3,
     name: "Chocolate Chip Cookies",
     description:
       "Crispy on the outside, chewy on the inside, packed with chocolate chips.",
-    imageSrc: "https://placehold.co/600x400.png",
+    imageSrc: "/catalog/product-choco-cookies.webp",
     imageAlt: "Chocolate Chip Cookies",
-    category: "Cookies",
+    category: ["Cookies", "All"],
   },
   {
-    id: "prod4",
+    id: 4,
     name: "Assorted Luxury Chocolates",
     description:
       "A fine selection of handcrafted dark, milk, and white chocolates.",
-    imageSrc: "https://placehold.co/600x400.png",
+    imageSrc: "/catalog/product-choco.webp",
     imageAlt: "Assorted Luxury Chocolates",
-    category: "Chocolates",
+    category: ["Chocolates", "All"],
   },
   {
-    id: "prod5",
-    name: "Strawberry Celebration Cake",
+    id: 5,
+    name: "Honey and Jam Cake",
     description:
-      "Layers of fresh strawberries and light cream, a fruity delight.",
-    imageSrc: "https://placehold.co/600x400.png",
+      "Honey sponge layered with sweet jam and coconut — a soft, fruity delight in every slice.",
+    imageSrc: "/catalog/product-honey-jam-cakes.webp",
     imageAlt: "Strawberry Celebration Cake",
-    category: "Cakes",
+    category: ["Cakes", "All"],
   },
   {
-    id: "prod6",
-    name: "Lemon Zest Cupcakes",
+    id: 6,
+    name: "Chocolate Muffins",
     description:
-      "Bright and refreshing lemon cupcakes with a sweet citrus glaze.",
-    imageSrc: "https://placehold.co/600x400.png",
+      "Soft chocolate muffins loaded with rich choco chips, a melt-in-mouth treat for every chocolate lover.",
+    imageSrc: "/catalog/product-choco-muffins.webp",
     imageAlt: "Lemon Zest Cupcakes",
-    category: "Cupcakes",
+    category: ["Muffins", "All"],
+  },
+  {
+    id: 7,
+    name: "Chocolate Dream Cake",
+    description:
+      "A rich chocolate cake layered with velvety chocolate ganache, perfect for chocolate lovers.",
+    imageSrc: "/catalog/product-dream-cake.webp",
+    imageAlt: "Chocolate Dream Cake",
+    category: ["Cakes"],
   },
 ];
 

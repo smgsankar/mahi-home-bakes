@@ -1,26 +1,18 @@
-import { products, type Product } from "@/data/content";
+import { products, type ProductTag } from "@/data/content";
 import ProductCard from "@/components/product-card";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useFadeInOnView } from "@/lib/use-fade-in-on-view";
 
-const categories: Product["category"][] = [
-  "Cakes",
-  "Cupcakes",
-  "Cookies",
-  "Chocolates",
-];
+const categories: ProductTag[] = ["Cakes", "Muffins", "Cookies", "Chocolates"];
 
 export default function ProductsSection() {
   const fadeInRef = useFadeInOnView<HTMLDivElement>();
-  const [selectedCategory, setSelectedCategory] = useState<
-    Product["category"] | "All"
-  >("All");
+  const [selectedCategory, setSelectedCategory] = useState<ProductTag>("All");
 
-  const filteredProducts =
-    selectedCategory === "All"
-      ? products
-      : products.filter((p) => p.category === selectedCategory);
+  const filteredProducts = products.filter((p) =>
+    p.category.includes(selectedCategory)
+  );
 
   return (
     <section id="products" className="bg-background py-12 md:py-20">

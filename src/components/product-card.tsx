@@ -38,7 +38,7 @@ export default function ProductCard({ product, index }: ProductCardProps) {
           </CardDescription>
           <div className="flex items-center text-xs text-accent mt-auto">
             <Tag className="h-4 w-4 mr-1" />
-            <span>{product.category}</span>
+            <span>{product.category[0]}</span>
           </div>
         </CardContent>
       </Card>
