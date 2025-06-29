@@ -96,27 +96,27 @@ export const testimonials: string[] = [
 
 export const galleryImages: GalleryImage[] = [
   {
-    src: "/gallery/gallery1.jpg",
+    src: "/gallery/gallery1.webp",
     alt: "Tower themed birthday cake with special pops and muffins",
   },
   {
-    src: "/gallery/gallery2.jpg",
+    src: "/gallery/gallery2.webp",
     alt: "Rasamalai celebration cake",
   },
   {
-    src: "/gallery/gallery3.jpg",
+    src: "/gallery/gallery3.webp",
     alt: "Minion themed birthday cake",
   },
   {
-    src: "/gallery/gallery4.jpg",
+    src: "/gallery/gallery4.webp",
     alt: "Rose themed birthday cake",
   },
   {
-    src: "/gallery/gallery5.jpg",
+    src: "/gallery/gallery5.webp",
     alt: "Butterfly themed birthday cake",
   },
   {
-    src: "/gallery/gallery6.jpg",
+    src: "/gallery/gallery6.webp",
     alt: "Dark chocolate birthday cake",
   },
 ];
