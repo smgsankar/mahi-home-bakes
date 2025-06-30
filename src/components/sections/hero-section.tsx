@@ -36,7 +36,7 @@ export default function HeroSection() {
             className="text-lg md:text-xl text-foreground mb-10 delay-400"
           >
             Crafting sweet moments with love and passion. Discover our
-            delightful range of celebration cakes, cupcakes, cookies, and
+            delightful range of celebration cakes, muffins, cookies, and
             chocolates.
           </p>
           <div ref={ctaRef} className="delay-600">

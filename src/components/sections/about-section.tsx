@@ -24,7 +24,7 @@ export default function AboutSection() {
             <p className="text-lg text-foreground mb-4">
               Welcome to Mahi Home Bakes! We are passionate about serving
               eggless, delicious, handcrafted delicacies that bring joy to every
-              occasion. From stunning celebration cakes to delightful cupcakes
+              occasion. From stunning celebration cakes to yummy muffins
               and cookies, every item is made with the finest ingredients and a
               sprinkle of love.
             </p>
