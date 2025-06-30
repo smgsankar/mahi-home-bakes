@@ -75,7 +75,7 @@ export const products: Product[] = [
     description:
       "Soft chocolate muffins loaded with rich choco chips, a melt-in-mouth treat for every chocolate lover.",
     imageSrc: "/catalog/product-choco-muffins.webp",
-    imageAlt: "Lemon Zest Cupcakes",
+    imageAlt: "Chocolate Muffins",
     category: ["Muffins", "All"],
   },
   {
