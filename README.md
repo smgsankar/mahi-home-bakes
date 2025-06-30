@@ -30,17 +30,20 @@ A modern, responsive website for Mahi Home Bakes - a home-based bakery specializ
 ## 🚀 Getting Started
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd mahi-home-bakes
    ```
 
 2. **Install dependencies**
+
    ```bash
    yarn install
    ```
 
 3. **Start the development server**
+
    ```bash
    yarn dev
    ```
@@ -78,6 +81,7 @@ public/
 ## 🎨 Key Components
 
 ### Sections
+
 - **Hero Section**: Eye-catching landing area with brand introduction
 - **About Section**: Information about the bakery and its story
 - **Products Section**: Filterable product catalog
@@ -86,6 +90,7 @@ public/
 - **Contact Section**: Business contact information and location
 
 ### Features
+
 - **Product Filtering**: Filter products by category (Cakes, Muffins, Cookies, Chocolates)
 - **Scroll to Top**: Floating action button for easy navigation
 - **Mobile Menu**: Responsive navigation for mobile devices
@@ -94,6 +99,7 @@ public/
 ## 📱 Contact Integration
 
 The website includes direct integration with:
+
 - **WhatsApp**: Instant messaging for orders and inquiries
 - **Email**: Professional email communication
 - **Instagram**: Social media presence
@@ -104,6 +110,7 @@ The website includes direct integration with:
 The project is configured for Firebase Hosting:
 
 1. **Build the project**
+
    ```bash
    yarn build
    ```
@@ -116,16 +123,20 @@ The project is configured for Firebase Hosting:
 ## 🔧 Configuration
 
 ### Contact Information
+
 Update contact details in `src/data/content.ts`:
+
 - WhatsApp number
 - Email address
 - Instagram link
 - Google Maps link
 
 ### Products
+
 Add or modify products in `src/data/content.ts` in the `products` array.
 
 ### Images
+
 - Product images: Place in `public/catalog/`
 - Gallery images: Place in `public/gallery/`
 - Other assets: Place in `public/`
@@ -143,7 +154,7 @@ This project is private and proprietary to Mahi Home Bakes.
 
 ## 🤝 Contributing
 
-This is a private project for Mahi Home Bakes. For any modifications or updates, please contact [smgsankar](mailto:gomzsankar@gmail.com).
+This is a private project for Mahi Home Bakes. For any modifications or updates, please contact me over [mail](mailto:gomzsankar@gmail.com).
 
 ---
 
