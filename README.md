@@ -143,7 +143,7 @@ This project is private and proprietary to Mahi Home Bakes.
 
 ## 🤝 Contributing
 
-This is a private project for Mahi Home Bakes. For any modifications or updates, please contact the development team.
+This is a private project for Mahi Home Bakes. For any modifications or updates, please contact [smgsankar](mailto:gomzsankar@gmail.com).
 
 ---
 
