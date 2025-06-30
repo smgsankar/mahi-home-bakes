@@ -66,7 +66,7 @@ export const products: Product[] = [
     description:
       "Honey sponge layered with sweet jam and coconut — a soft, fruity delight in every slice.",
     imageSrc: "/catalog/product-honey-jam-cakes.webp",
-    imageAlt: "Strawberry Celebration Cake",
+    imageAlt: "Honey and Jam Cake",
     category: ["Cakes", "All"],
   },
   {
