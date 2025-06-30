@@ -87,6 +87,24 @@ export const products: Product[] = [
     imageAlt: "Chocolate Dream Cake",
     category: ["Cakes"],
   },
+  {
+    id: 8,
+    name: "Coconut Cookies",
+    description:
+      "Crispy coconut cookies with a hint of vanilla, perfect for tea time.",
+    imageSrc: "/catalog/product-coconut-cookies.webp",
+    imageAlt: "Coconut Cookies",
+    category: ["Cookies"],
+  },
+  {
+    id: 9,
+    name: "Multi-tier Celebration Cake",
+    description:
+      "A stunning multi-tier cake designed for grand celebrations, customizable to your theme.",
+    imageSrc: "/catalog/product-tier-cake.webp",
+    imageAlt: "Multi tier Celebration Cake",
+    category: ["Cakes"],
+  },
 ];
 
 export const testimonials: string[] = [
