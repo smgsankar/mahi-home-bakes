@@ -14,15 +14,13 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="py-12 md:py-20 relative bg-gradient-to-br from-background to-primary/30 min-h-dvh flex items-center justify-center pt-20 overflow-hidden"
+      className="py-12 md:py-20 relative min-h-dvh flex items-center justify-center pt-20 overflow-hidden
+                 bg-gradient-to-br from-background to-primary/30
+                 bg-[url('hero-bg.webp')] bg-cover bg-center bg-no-repeat
+                 [background-blend-mode:multiply]"
     >
-      <div className="absolute inset-0 opacity-20">
-        <img
-          src="hero-bg.webp"
-          alt="Assortment of delicious baked goods"
-          className="w-full h-full object-scale-down object-bottom md:object-cover md:object-center"
-        />
-      </div>
+      {/* Backdrop overlay for better text readability */}
+      <div className="absolute inset-0 bg-white/50 z-0"></div>
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <div className="max-w-3xl mx-auto">
           <h1
