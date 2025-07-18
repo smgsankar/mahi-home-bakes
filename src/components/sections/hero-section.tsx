@@ -20,7 +20,7 @@ export default function HeroSection() {
                  [background-blend-mode:multiply]"
     >
       {/* Backdrop overlay for better text readability */}
-      <div className="absolute inset-0 bg-white/50 z-0"></div>
+      <div className="absolute inset-0 z-0 bg-hero-custom"></div>
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <div className="max-w-3xl mx-auto">
           <h1
