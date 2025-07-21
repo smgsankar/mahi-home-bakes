@@ -16,7 +16,7 @@ export default function HeroSection() {
       id="home"
       className="py-12 md:py-20 relative min-h-dvh flex items-center justify-center pt-20 overflow-hidden
                  bg-gradient-to-br from-background to-primary/30
-                 bg-[url('hero-bg.webp')] bg-cover bg-center bg-no-repeat
+                 bg-[url('/hero-bg.webp')] bg-cover bg-center bg-no-repeat
                  [background-blend-mode:multiply]"
     >
       {/* Backdrop overlay for better text readability */}
